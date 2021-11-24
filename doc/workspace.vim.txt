@@ -1,0 +1,53 @@
+*workspace.vim.txt*
+                                                               *workspace.vim*
+
+==============================================================================
+CONTENTS                                              *workspace.vim-contents*
+  1. Introduction........................................|workspace.vim-intro|
+  2. Configuration......................................|workspace.vim-config|
+  3. Commands.........................................|workspace.vim-commands|
+  4. Functions.......................................|workspace.vim-functions|
+  5. Mappings.........................................|workspace.vim-mappings|
+
+==============================================================================
+INTRODUCTION                                             *workspace.vim-intro*
+
+A plugin providing vim bindings for https://github.com/okkays/workspace
+
+
+==============================================================================
+CONFIGURATION                                           *workspace.vim-config*
+
+                                                   *g:workspace_auto_map_keys*
+Whether to use the default mappings. Disable to set up your own.
+
+==============================================================================
+COMMANDS                                              *workspace.vim-commands*
+
+:WsAg                                                                  *:WsAg*
+  Runs `workspace ag` against the given args, putting the results in fzf.
+
+:[range]WsAg                                                           *:WsAg*
+  Runs `workspace ag` against the given range, putting the results in fzf.
+
+==============================================================================
+FUNCTIONS                                            *workspace.vim-functions*
+
+workspace#FzfAgGrep({arg}, {is_visual})                *workspace#FzfAgGrep()*
+
+  Opens a fzf#vim#grep window for `workspace ag`
+
+workspace#FzfWorkspaceFiles()                  *workspace#FzfWorkspaceFiles()*
+
+  Opens a fzf window for all of the files in the current workspace.
+
+==============================================================================
+MAPPINGS                                              *workspace.vim-mappings*
+
+
+*<C-P>*
+
+  Opens a fzf window with a list of files in the current workspace.
+
+
+vim:tw=78:ts=8:ft=help:norl:
