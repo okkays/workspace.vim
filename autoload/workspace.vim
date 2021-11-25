@@ -38,7 +38,7 @@ function! workspace#FzfWorkspaceFiles() abort
       \ {
       \   'source': "workspace ls",
       \   'dir': root,
-      \   'sinklist': function('s:build_quickfix_list')
+      \   'sinklist': function('helpers#BuildQuickfixList')
       \ },
       \ 0), {'options': '--multi --bind ctrl-a:select-all'}))
 endfunction
