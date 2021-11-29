@@ -15,3 +15,10 @@ if g:workspace_auto_map_keys
   " Set ctrl-p to browse for files in git repository.
   nnoremap <silent> <C-P> :call workspace#FzfWorkspaceFiles()<CR>
 endif
+
+""
+" Runs `workspace ag` against the given args, putting the results in fzf.
+command! -nargs=* WsAg call workspace#FzfAgGrep(<q-args>, 0)
+""
+" Runs `workspace ag` against the given range, putting the results in fzf.
+command! -nargs=* -range WsAg call workspace#FzfAgGrep(<q-args>, 1)

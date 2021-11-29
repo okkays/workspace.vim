@@ -42,10 +42,3 @@ function! workspace#FzfWorkspaceFiles() abort
       \ },
       \ 0), {'options': '--multi --bind ctrl-a:select-all'}))
 endfunction
-
-""
-" Runs `workspace ag` against the given args, putting the results in fzf.
-command! -nargs=* WsAg call workspace#FzfAgGrep(<q-args>, 0)
-""
-" Runs `workspace ag` against the given range, putting the results in fzf.
-command! -nargs=* -range WsAg call workspace#FzfAgGrep(<q-args>, 1)
