@@ -10,6 +10,7 @@ bash utility.
 ```vimscript
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'okkays/helpers.vim'
 Plug 'okkays/workspace', { 'dir': '~/.workspace', 'do': './install' }
 Plug 'okkays/workspace.vim'
 ```
