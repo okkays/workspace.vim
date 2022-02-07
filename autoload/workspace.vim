@@ -21,7 +21,7 @@ endfunction
 "
 " Opens a fzf#vim#grep window for `workspace ag`
 function! workspace#FzfAgGrep(arg, is_visual) abort
-  let l:ag_args = shellescape(workspace#GetContentArg(a:arg, a:is_visual))
+  let l:ag_args = workspace#GetContentArg(a:arg, a:is_visual)
   call fzf#vim#grep(
   \   'workspace ag --column '.l:ag_args, 1,
   \   fzf#vim#with_preview({'dir': systemlist('workspace root')[0]}), 0)
